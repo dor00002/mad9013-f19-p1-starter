@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Roboto&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -13,76 +15,118 @@ body {
     /*font-family: font stack required for body text */
     font-size: 1rem;
     line-height: 1.4;
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 16px;
+    font-family: 'Roboto', 'Courier New',sans-serif;
+    background: shsl(22, 17%, 91%);
+    
 }
 
 h1, h2, h3, h4 {
     /*font-family: font stack required for headings */
+    font-family: 'Lora', Times, serif;
 }
 
 p {
-    
+    /* padding: 1rem; */
 }
 
 .container {
-    
+    max-width: 1500px;
+   
 }
 
 .subnav {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    background: hsl(24, 42%, 91%);
+   
     
 }
 
 .subnav a {
+    margin: 1rem 1rem 1rem 1rem;
+    font-family: 'Roboto', 'Courier New',sans-serif;
+    /* background-size: 30px; */
     
 }
 
 .mainnav {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: hsl(223, 31%, 53%);
 }
 
 .mainnav a {
-    
+    font-family: 'Roboto', 'Courier New',sans-serif; 
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    font-size: 20px;
 }
 
 .masthead {
+    font-size: 16px;
+    background-color:hsl(228, 57%, 49%);
     
 }
 
 .times-logo {
-    
+    background-image: url(logo.png);
+    /* background-repeat: repeat; */
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: auto;
 }
 
 .masthead h1 {
+    text-align: center;
+    padding-top: 0;
     
 }
 
 .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-auto-columns: 200px;
+    padding: 1rem;
     
 }
 
 .content .story {
-    
+    background: hsl(220, 15%, 18%);
 }
 
 .story.lead-story {
+    grid-column: span 2;
+    background: hsl(215, 86%, 40%);
     
 }
 
-h1.story-title {
-    
+h2.story-title {
+    background-color: hsl(0, 14%, 18%);
+    text-align: center; 
 }
 
 .story img {
+    float: left;
+    margin-right: 20px;
+    padding-bottom: 0;
     
 }
 
 .story p {
+    padding: 1rem;
     
 }
 
 .story blockquote {
     quotes: "\201E" "\201D";
+    /* clear: both; */
+    padding-top: 20px;
 }
 
 .story blockquote::before {
@@ -94,22 +138,30 @@ h1.story-title {
 }
 
 .story p.byline {
+    background-color: hsl(0, 14%, 18%);
+    
     
 }
 
 p.byline span.author {
+    font-size: 20px;
     
 }
 
 p.byline span.pub {
+    margin-left: 20px;
     
 }
 
 .foot {
+    background-color: hsl(220, 15%, 18%);
+    color: hsl(0, 0%, 98%);
     
-}
+    }
 
 .foot p
 {
-    
+    text-align: center;
+    font-size: 12px;
+    padding: 1rem;
 }
