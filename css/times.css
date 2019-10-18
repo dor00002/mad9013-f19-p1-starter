@@ -67,15 +67,23 @@ p {
 
 .mainnav a {
     font-family: 'Roboto', 'Courier New',sans-serif; 
-    margin: 1.5rem 1rem 1.5rem 1rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
     font-size: 20px;
     color: hsl(223, 82%, 90%);
     text-decoration: none;
 }
-.mainnav a:hover{
-    text-decoration: underline;
-  }
+@media (min-width: 600px) {
+    .mainnav a {
+        margin: 1rem 2rem 1rem 2rem;
+        /* margin-left: 2rem;
+        margin-right: 2rem */
+    
+    }
 
+    .mainnav a:hover{
+        text-decoration: underline;
+    }
+}
 .masthead {
     font-size: 16px;
     background-color: hsl(223, 82%, 10%);
@@ -95,43 +103,58 @@ p {
     margin-top: 0;
     text-align: center;
     color: hsl(223, 82%, 90%);
-    text-shadow: 4px 4px hsl(223, 82%, 60%);
+    text-shadow: 2px 2px hsl(223, 82%, 60%);
     
     
 }
+@media (min-width: 600px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        grid-auto-columns: 200px;
+        
+    }
+    .content .story {
+        border-radius: 25px;
+    }
+    .story img {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 25px;
+    }
 
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    grid-auto-columns: 200px;
-    padding: 1rem;
-    
-    
 }
 
 .content .story {
     background-color: hsl(223, 82%, 80%);
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .story.lead-story {
     grid-column: span 2;
-    background-color: hsl(223, 82%, 70%);
+    font-size: 20px;
+    background-color: hsl(223, 52%, 70%);
     
 }
+
+    
 
 h2.story-title {
     /* background-color: hsl(0, 14%, 18%); */
     color:hsl(223, 82%, 40%);
     text-align: center; 
     font-weight: bold;
+    padding-top: 10px;
 }
 
 .story img {
-    float: left;
+    /* float: left; */
     margin-right: 20px;
     margin-bottom: 20px;
+    width: auto;
+    border-radius: 15px;
 }
 
 .story p {
